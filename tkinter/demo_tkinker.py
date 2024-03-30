@@ -1,8 +1,7 @@
 import tkinter as tk
 import pandas as pd
 import random
-from matplotlib.backends.backend_tkagg import (
-FigureCanvasTkAgg, NavigationToolbar2Tk)
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import numpy as np
 from tkinter.messagebox import *
 from tkinter import filedialog
@@ -153,11 +152,9 @@ class TestGui(object):
         self.stride_list = ['等距', '不等距']
         self.yStride_value.set(0)  # 设置默认值 '0'
         # 单选组件参数介绍 text=勾选框文本, variable=赋值对象, value=勾选后的值
-        self.choose_yStride_one = tk.Radiobutton(self.set_y, text=self.stride_list[0],
-                                             variable=self.yStride_value, value=self.stride_list[0], font=('行楷', 12))
+        self.choose_yStride_one = tk.Radiobutton(self.set_y, text=self.stride_list[0], variable=self.yStride_value, value=self.stride_list[0], font=('行楷', 12))
         self.choose_yStride_one.grid(padx=0, pady=0, row=1, column=6)
-        self.choose_yStride_two = tk.Radiobutton(self.set_y, text=self.stride_list[1],
-                                             variable=self.yStride_value, value=self.stride_list[1], font=('行楷', 12))
+        self.choose_yStride_two = tk.Radiobutton(self.set_y, text=self.stride_list[1], variable=self.yStride_value, value=self.stride_list[1], font=('行楷', 12))
         self.choose_yStride_two.grid(padx=0, pady=0, row=1, column=7)
         # yLabel文字
         self.yLabel_text = tk.Label(self.set_y, text="yLabel输入:", font=('SimHei', 15))
